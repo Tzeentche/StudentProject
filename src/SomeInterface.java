@@ -15,7 +15,7 @@ class Example implements SomeInterface {
 
     @Override
     public void addTwoDigits(int one, int two) {
-        SOME_VARIABLE = 5;
+        
     }
 
     public void someMethod() {
