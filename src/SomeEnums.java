@@ -1,6 +1,6 @@
 public class SomeEnums {
-    
-    enum CoffeSize {SMALL(100), MEDIUM(200), BIG(300)
+
+    enum CoffeSize {SMALL(100), MEDIUM(200), BIG(300);
 
         String coffeClass;
         int milliliters;
