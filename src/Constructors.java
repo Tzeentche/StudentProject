@@ -18,5 +18,14 @@ class Run {
     public static void main(String[] args) {
         Constructors constructors = new Constructors();
         System.out.println(constructors.i);
+
+        new Constructors();
+    }
+
+}
+
+class MyParent {
+    MyParent(int i) {
+        System.out.println("MyParentConstructor");
     }
 }
