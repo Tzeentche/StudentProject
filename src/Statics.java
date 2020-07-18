@@ -25,5 +25,6 @@ public class Statics {
         statics2.j = 2;
         System.out.println(statics.j);
         System.out.println(statics2.j);
+        System.out.println(statics.i);
     }
 }
