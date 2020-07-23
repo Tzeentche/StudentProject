@@ -7,8 +7,12 @@ public class Exceptionss {
     void someMethod() {
         try {
             Object o = null;
+
         } catch (Exception e) {
             e.printStackTrace();
+
+        } finally {
+            System.out.println("Finally!");
         }
     }
 }
