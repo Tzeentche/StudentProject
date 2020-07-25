@@ -1,10 +1,9 @@
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
+import java.nio.Buffer;
 
 public class Files {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         File file = new File("tmp.txt");
 
@@ -31,5 +30,17 @@ public class Files {
         char[] someChars = new char[20];
         fileReader.read(someChars);
         System.out.println(someChars);
+
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        bufferedWriter.write("str3");
+        bufferedWriter.newLine();
+        bufferedWriter.write("str4");
+//        bufferedWriter.flush();
+//        bufferedWriter.close();
+
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        while (bufferedReader.ready()) {
+            System.out.println(bufferedReader.readLine());
+        }
     }
 }
