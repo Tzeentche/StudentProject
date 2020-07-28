@@ -3,12 +3,12 @@ import java.io.*;
 public class Serializations {
 
     public static void main(String[] args) throws Exception {
-        User user = new User();
+        Serialisables user = new Serialisables();
         user.lifeLevel = 55;
-
         Sword sword = new Sword();
         sword.level = 5;
         user.sword = sword;
+        user.childLevel = 65;
 
         FileOutputStream fileOutputStream = new FileOutputStream("tempfile");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -22,6 +22,7 @@ public class Serializations {
 
         System.out.println(newUser.lifeLevel);
         System.out.println(newUser.sword.level);
+//        System.out.println(newUser.childLevel);
     }
 }
 
