@@ -15,8 +15,16 @@ public class Equalses {
 
         Book book = new Book();
         book.author = "Carnegy";
+        book.name = "How to get friends";
         Map<String, Book> library = new HashMap<>();
-        library.put("How to get friends", book);
+
+        library.put(book.name, book);
+
+        Book carnegyBook = library.get(book.name);
+        System.out.println(carnegyBook.author);
+
+        System.out.println(book.hashCode());
+        System.out.println(new Book().hashCode());
     }
 
     @Override
@@ -27,4 +35,5 @@ public class Equalses {
 
 class Book {
     String author;
+    String name;
 }
