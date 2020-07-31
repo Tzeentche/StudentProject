@@ -1,6 +1,4 @@
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Queues {
 
@@ -9,10 +7,13 @@ public class Queues {
         Queue queue = new LinkedList<>();
         Queue queue2 = new PriorityQueue<>();
 
-        queue.offer("1");
-        queue.offer(2);
         queue.offer("3");
+        queue.offer("1");
+        queue.offer("2");
 
+        List list = (List)queue;
+        Collections.sort(list);
+        
         while (queue.size() > 0) {
             System.out.println(queue.poll());
         }
