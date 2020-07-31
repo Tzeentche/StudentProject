@@ -33,7 +33,7 @@ public class Sortings {
 
     public static void main(String[] args) {
 
-        Set set = new TreeSet<>();
+        Set set = new TreeSet<>(new ComparePerson());
         set.add("2");
         set.add("3");
         set.add("4");
