@@ -13,7 +13,7 @@ public class Queues {
 
         List list = (List)queue;
         Collections.sort(list);
-        
+
         while (queue.size() > 0) {
             System.out.println(queue.poll());
         }
