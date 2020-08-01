@@ -13,6 +13,12 @@ public class Maps {
         map.put("3", "Three");
         map.put("2", "two");
 
-        System.out.println(map.get(3));
+        System.out.println(map.get("3"));
+
+        Set set = map.entrySet();
+        for(Object o : set) {
+            System.out.println(o);
+        }
+
     }
 }
