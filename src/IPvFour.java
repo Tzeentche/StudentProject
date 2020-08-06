@@ -8,7 +8,7 @@ public class IPvFour {
         int counter = 0;
         String IPv4 = "0.0.0.0";
 
-        Pattern pattern = Pattern.compile("^(\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5]){3}(\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])$");
+        Pattern pattern = Pattern.compile("^(((\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3}(\\d|[1-9]\\d|1\\d\\d|2[0-4]\\d|25[0-5]))$");
         Matcher matcher = pattern.matcher(IPv4);
 
         while (matcher.find()) {
@@ -19,6 +19,6 @@ public class IPvFour {
                     " and ending at index " + matcher.end()));
         }
 
-        System.out.println("Matches found");
+        System.out.println("Matches found " + counter);
     }
 }
