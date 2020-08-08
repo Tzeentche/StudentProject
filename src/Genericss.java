@@ -1,31 +1,41 @@
 import java.io.*;
 import java.util.*;
 
-class Cars extends Genericss implements Comparable, Serializable {
+class Parents {
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
+}
+
+class Childs extends Parents {
+
 }
 
 public class Genericss <T extends Genericss & Comparable & Serializable> {
 
-    T var;
-
     public static void main(String[] args) throws Exception {
 
-        Genericss<Cars> genericss = new Genericss<>();
-        genericss.var = new Cars();
-        System.out.println(genericss.var);;
+        List<File> list = new ArrayList<>();
+
+        Genericss genericss = new Genericss();
+        genericss.method(list);
+        
+        List list2 = new ArrayList();
+        list.add(new File(""));
+
+        for(File file : list) {
+            System.out.println(file.getAbsoluteFile());
+        }
     }
 
-    T method(T type) {
-        type.someMethos();
-        return type;
+    void method(List list) {
+        list.add(new Genericss());
     }
+}
 
-    void someMethos() {
-        System.out.println("Bla!");
-    }
+class MyClass {
+
+        Object t;
+
+        Object method(Object t) {
+        return t;
+        }
 }
