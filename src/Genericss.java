@@ -2,40 +2,37 @@ import java.io.*;
 import java.util.*;
 
 class Parents {
-
+    void method() {
+        System.out.println("b");
+    }
 }
 
 class Childs extends Parents {
 
 }
 
+class Sons extends Childs {
+
+    void method() {
+        System.out.println("Son");
+    }
+}
 public class Genericss <T extends Genericss & Comparable & Serializable> {
 
     public static void main(String[] args) throws Exception {
 
-        List<File> list = new ArrayList<>();
-
+        List<Parents> list = new ArrayList<>();
+        list.add(new Parents());
         Genericss genericss = new Genericss();
         genericss.method(list);
-        
-        List list2 = new ArrayList();
-        list.add(new File(""));
-
-        for(File file : list) {
-            System.out.println(file.getAbsoluteFile());
-        }
     }
 
-    void method(List list) {
-        list.add(new Genericss());
-    }
-}
+    void method(List<? super Childs> list) {
+        list.add(new Sons());
 
-class MyClass {
-
-        Object t;
-
-        Object method(Object t) {
-        return t;
+        for(Object o : list) {
+            Parents p = (Parents)o;
+            p.method();
         }
+    }
 }
