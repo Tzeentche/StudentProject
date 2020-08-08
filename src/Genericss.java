@@ -33,6 +33,7 @@ public class Genericss <T extends Genericss & Comparable & Serializable> {
         for(Object o : list) {
             Parents p = (Parents)o;
             p.method();
+            
         }
     }
 }
